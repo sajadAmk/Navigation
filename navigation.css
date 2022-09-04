@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+.barNavigation {
+    position: relative;
+    width: 600px;
+    height: 120px;
+    box-shadow: 20px 20px 50px #92B4EC,
+    10px 10px 60px #92B4EC,
+    inset 10px 10px 50px #92B4EC,
+    inset  10px 10px 30px #92B4EC,
+    inset -10px -10px 15px #92B4EC;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 30px;
+}
+.barNavigation li {
+    position: relative;
+    list-style: none;
+    width: 80px;
+    margin: 0 5px;
+}
+.barNavigation li::before {
+    position: absolute;
+    height: 6px;
+    width: 6px;
+    background-color: #000;
+    border-radius: 50%;
+    content: "";
+    top: 30px;
+    left: 50%;
+    transition: 0.5s;
+    transform: translateX(-50%);
+}
+.barNavigation li.active::before {
+    background: #3EC70B;
+    box-shadow : 0 0 10px #3EC70B,
+    
+}
+.barNavigation li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.barNavigation li a .addIcon {
+    position: absolute;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    border-radius: 50%;
+    transition: 0.5s;
+    transition-delay: 0.2s;
+}
+.barNavigation li.active a .addIcon {
+    background: #fff;
+    color: #000;
+    transform: translateY(-50px);
+    box-shadow : 5px 5px 20cm #92B4EC,
+    5px 5px 20cm #92B4EC,
+    inset 3px 3px 5px #000,
+    inset  -1px -2px 3px #92B4EC;
+    transition-delay: 0;
+}
+.barNavigation li a .addIcon::before {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border-radius: 50%;
+    box-shadow : 5px 5px 10px #92B4EC,
+    5px 5px 10px #92B4EC,
+    inset 3px 3px 5px #000,
+    inset  -1px -2px 3px #92B4EC;   
+    transform: scale(0);
+    transition: 0.5s;
+} 
+.barNavigation li.active a .addIcon::before {
+    transform: scale(1);
+}
+.barNavigation li a .textMessage {
+    position: absolute;
+    font-size: 16px;
+    color: #000;
+    border-radius: 10px;
+    transform: translateY(35px);
+    transition: 0.5s;
+    opacity: 0;
+    background: #FFFDDE;
+    box-shadow : 5px 5px 20px #92B4EC,
+    5px 5px 40px #92B4EC,
+    inset 3px 3px 5px #000,
+    inset  -1px -2px 3px #92B4EC;
+    padding: 3px 7px;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+.barNavigation li.active a .textMessage {
+    opacity: 1;
+    transition-delay: 0.2s;
+    transform: translateY(10px);
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Navigation bar</title>
+        <link rel="stylesheet" href="navigation.css">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="navigation.js"></script>
+    </head>
+    <body>
+        <ul class="barNavigation">
+            <li class="active">
+                <a href="https://twitter.com/click87738442">
+                    <span class="addIcon"><i class="fa fa-twitter" aria-hidden="true"></i></span>
+                    <span class="textMessage">twitter</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/sajjad-am-558479226/">
+                    <span class="addIcon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+                    <span class="textMessage">linkedin</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.reddit.com/user/BetterSail2022">
+                    <span class="addIcon"><i class="fa fa-reddit" aria-hidden="true"></i></span>
+                    <span class="textMessage">reddit</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://t.me/Sa_jjad_00">
+                    <span class="addIcon"><i class="fa fa-telegram" aria-hidden="true"></i></span>
+                    <span class="textMessage">telegram</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/sajadAmk">
+                    <span class="addIcon"><i class="fa fa-github" aria-hidden="true"></i></span>
+                    <span class="textMessage">girub</span>
+                </a>
+            </li>
+        </ul>
+        <!--this script working  -->
+        <script>
+            var list = document.querySelectorAll(".barNavigation li");
+            function linkSelect() {
+                list.forEach((item) =>
+                item.classList.remove("active"));
+                this.classList.add("active");
+            }
+            list.forEach((item) =>
+            item.addEventListener("click", linkSelect))
+        </script>
+    </body>
+</html>
